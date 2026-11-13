@@ -104,33 +104,41 @@ Using **Zenmap**, a quick host discovery and port scan (`nmap -T4 -F 10.0.0.0/24
 
 ## 07. Evidence & Verification Screenshots
 
-### Figure 1: Local Interface Verification
+### Figure 1: Local Interface Verification (`ifconfig`)
 ![Figure 1](assets/figure-1.png)
-*Figure 1: `ip a` and `ifconfig` output confirming Kali Linux static interface `10.0.0.2/24`.*
+*Figure 1: `ifconfig` output confirming Kali Linux static interface `10.0.0.2/24`.*
 
-### Figure 2: WHOIS & NSLookup Resolution
+### Figure 2: Local Interface Verification (`ip a`)
 ![Figure 2](assets/figure-2.png)
-*Figure 2: `whois` and `nslookup` outputs confirming domain ownership and IP resolution (`192.232.216.135`).*
+*Figure 2: `ip a` output confirming Kali Linux static interface `10.0.0.2/24`.*
 
-### Figure 3: DNS Record Enumeration
+### Figure 3: DNS Resolution (`nslookup`)
 ![Figure 3](assets/figure-3.png)
-*Figure 3: `dnsrecon -d networkwalks.com` output showing NS, MX, TXT, and 8 SRV records.*
+*Figure 3: `nslookup` output confirming IP resolution (`192.232.216.135`).*
 
-### Figure 4: HTTP Headers & Web Stack Fingerprinting
+### Figure 4: Domain Ownership (`whois`)
 ![Figure 4](assets/figure-4.png)
-*Figure 4: `curl -I` and `whatweb` terminal captures showing the 301 HTTPS redirect and WordPress stack.*
+*Figure 4: `whois` output confirming domain ownership and registration dates.*
 
-### Figure 5: Web Application Firewall Detection
+### Figure 5: DNS Record Enumeration (`dnsrecon`)
 ![Figure 5](assets/figure-5.png)
-*Figure 5: `wafw00f` output confirming **ModSecurity (SpiderLabs)** WAF detection.*
+*Figure 5: `dnsrecon -d networkwalks.com` output showing NS, MX, TXT, and 8 SRV records.*
 
-### Figure 6: Zenmap Host Discovery Output
+### Figure 6: HTTP Headers & Web Stack (`curl -I` & `whatweb`)
 ![Figure 6](assets/figure-6.png)
-*Figure 6: Zenmap Nmap Output displaying active hosts `10.0.0.1` and `10.0.0.2`.*
+*Figure 6: `curl -I` and `whatweb` terminal captures showing the 301 HTTPS redirect and WordPress stack.*
 
-### Figure 7: Zenmap Network Topology Map
+### Figure 7: Web Application Firewall Detection (`wafw00f`)
 ![Figure 7](assets/figure-7.png)
-*Figure 7: Topology map displaying active hosts `10.0.0.1` and `10.0.0.2`.*
+*Figure 7: `wafw00f` output confirming **ModSecurity (SpiderLabs)** WAF detection.*
+
+### Figure 8: Zenmap Host Discovery Output
+![Figure 8](assets/figure-8.png)
+*Figure 8: Zenmap Nmap Output displaying active hosts `10.0.0.1` and `10.0.0.2`.*
+
+### Figure 9: Zenmap Network Topology Map
+![Figure 9](assets/figure-9.png)
+*Figure 9: Topology map displaying active hosts `10.0.0.1` and `10.0.0.2`.*
 
 ---
 
